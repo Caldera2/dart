@@ -1,0 +1,30 @@
+class Car {
+  String carName;
+  DateTime carDateOfRelease;
+  String carModel;
+  String carType;
+
+  // Constructor for attributes
+  Car(this.carName, this.carDateOfRelease, this.carModel, this.carType);
+
+  void showCarInfo() {
+    print('Car Name is : $carName');
+    print('Car Date of Release : $carDateOfRelease');
+    print('Car Model : $carModel');
+    print('car Type : $carType');
+  }
+}
+
+void main() {
+  var cars = [
+    Car('Benz', DateTime(2020, 5, 15), 'Sedan', 'SUV'),
+    Car('Volvo', DateTime(2025, 9, 2), 'Blue', 'Jeep'),
+    Car('Toyota', DateTime(2003, 7, 5), 'Black', 'unknown'),
+    Car('Lexus', DateTime(2022, 10, 30), 'Violet', 'unknown'),
+    Car('Honda', DateTime(2021, 12, 31), 'Green', 'Lorry'),
+  ];
+
+  for (var car in cars) {
+    car.showCarInfo();
+  }
+}
